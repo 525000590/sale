@@ -6,12 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:sync:supabase": "node scripts/sync-supabase.js",
+    "db:watch:supabase": "node scripts/sync-supabase.js --watch --interval=2000",
+    "dev:with-sync": "node scripts/dev-with-sync.js"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.112.4",
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.5.0",
+    "jsonwebtoken": "^9.0.0",
     "next": "16.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
